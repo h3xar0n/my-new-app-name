@@ -27,21 +27,22 @@
           	<span class="icon-bar"></span>
   				</button>
   				<div class="ida navbar-brand">
-  					<a href="#ida">I D A</a>
+  					<%= link_to('I D A', static_pages_landing_page_path) %>
   				</div>
   			</div>
   			<div class="navbar-collapse collapse">
   				<ul class="nav navbar-nav">
-  					<li><a href="#">About</a></li>
-  					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-hashpopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+  					<li><%= link_to('ABOUT', static_pages_about_path) %></li>
+  				<!--	<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-hashpopup="true" aria-expanded="false">Products <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Chairs</a></li>
               <li><a href="#">Lights</a></li>
               <li><a href="#">Tables</a></li>
             </ul>
           </li>
-
-  					<li><a href="#">Contact</a></li>
+          -->
+            <li><%= link_to('PRODUCTS', products_path) %></li>
+  					<li><%= link_to('CONTACT', static_pages_contact_path) %></li>
   				</ul>
   			</div>
   		</div>
@@ -53,10 +54,7 @@
     <footer class="footer">
     	<div class="container">
     		<div class="col-xs-12 col-lg-12">&copy; 2016 Interior Design Again </div>
-   			<div class="col-xs-12 col-lg-12 icons">
-   				<%= image_tag("fb_icon.png", size: "25x25") %>
-   				<%= image_tag("pinterest_icon.png", size: "25x25") %>
-   			</div> 
+   			<div class="col-xs-12 col-lg-12 icons"><%= image_tag("fb_icon.png", size: "25x25") %><%= image_tag("pinterest_icon.png", size: "25x25") %></div> 
    		</div>
     </footer>
   </body>
