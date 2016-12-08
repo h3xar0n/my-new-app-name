@@ -1,17 +1,18 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Quicksand', verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: 'Lato', verdana, arial, helvetica, sans-serif;
+  font-family: 'Quicksand', verdana, arial, helvetica, sans-serif;
   font-size: 1.2em;
   font-weight: 100;
   line-height: 18px;
   text-align: center;
+  padding: 2px 15px;
 }
 
 pre {
