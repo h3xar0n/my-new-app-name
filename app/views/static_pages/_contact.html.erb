@@ -1,0 +1,20 @@
+<form>
+	<div class="form-group">
+		<%= label_tag :name, "Name *" %>
+		<%= text_field_tag :name, nil, class: "form-control", :required => true, placeholder: "Enter Name" %>
+	</div> 
+	<div class="form-group">
+		<%= label_tag :phone, "Phone number *" %>
+		<%= text_field_tag :phone, nil, class: "form-control", :required => true, placeholder: "Enter Phone number" %>
+	</div>     
+	<div class="form-group">
+		<%= label_tag :email, "Email Address *" %>
+		<%= text_field_tag :email, nil, class: "form-control", :required => true, placeholder: "Enter Email" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag :message, "Your message below. *" %>
+		<%= text_area_tag :message, nil, class: "form-control", style: "resize:none", cols: "40", rows: "5", :required => true, placeholder: "Enter Message" %>
+		<p id="char-count"></p><p id="visible-comment"></p>
+	</div>  
+	<%= submit_tag("Send", class: "btn btn-default") %>  
+</form>

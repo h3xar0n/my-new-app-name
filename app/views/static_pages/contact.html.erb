@@ -1,22 +1,8 @@
 
 <div class="container-fluid" id="contact" >
-      <div class="header">
-        <h1>Contact us</h1>
-        <h3>If you have a question for us about our products or if you want to make a special order let us know!</h3>
-      </div><!-- end header -->
-
-        <div class="col-xs-12 col-md-4 col-lg-4 contact-form">
-          <form>
-            <div class="form-group"><label for="name">Your Name *</label><input type="text" id="name" class="form-control" placeholder="Name" required="required" title="Put your name here" name="name"><p id="visible-name"></p>
-            </div>
-            <div class="form-group"><label for="tel">Phone number *</label><input type="tel" id="phone" class="form-control form-inline" placeholder="Phone number" minlength="10" maxlength="10" title="Leave your number" name="tel"><p id="visible-phone"></p>
-            </div> 
-            <div class="form-group"><label for="email">Email address *</label><input type="email" id="email" class="form-control" placeholder="Email" required="required" title="Email address required" name="email"><p id="visible-email"></p>
-            </div>
-            <div class="form-group"><label for="messagebox">Your message below. *</label>
-            	<textarea style="resize:none" cols="40" rows="5" class="form-control" placeholder="Message" class="message-box" id="messagebox" required="required" title="Put your message here" name="message"></textarea>
-            	<p id="char-count"></p><p id="visible-comment"></p>
-            </div>
-            <button type="submit" class="btn btn-default" id="submit-button">Submit</button>
-            </div>
-          </form>
+  <div class="header">
+  <h1>Contact us</h1>
+  <h3>If you have a question for us about our products or if you want to make a special order let us know!</h3>
+  </div><!-- end header -->
+  <%= render 'static_pages/contact' %>
+</div>

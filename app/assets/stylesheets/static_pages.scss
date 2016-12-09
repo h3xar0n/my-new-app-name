@@ -22,11 +22,7 @@ body {
 
 .navbar .navbar-nav {
   display: inline-block;
-  float: none;
   vertical-align: top;
-}
-.navbar .navbar-collapse {
-  text-align: center;
 }
 
 .img-responsive {
@@ -44,6 +40,10 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+#contact form {
+	width: 40%;
+	margin: auto;
+}
 
 .footer {
 	position: fixed;
@@ -85,11 +85,3 @@ h1, h2, h3, h4{
 	text-align: center;
 }
 
-#contact {
-	background-image: url("../images/mail.jpg");
-}
-
-.contact-form {
-	left: 35%;
-	padding-bottom: 50px;
-}
