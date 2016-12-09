@@ -11,20 +11,18 @@
   			<%= link_to('I D A', static_pages_landing_page_path) %>
   		</div>
   	</div>
+    <div class="navbar-form navbar-right" role="search">
+      <%= form_tag("/products", method: "get", class: "row") do %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag "Search", name: nil %>
+      <% end %>
+    </div>
   	<div class="navbar-collapse collapse">
   		<ul class="nav navbar-nav">
         <li><%= link_to('PRODUCTS', products_path) %></li>
   			<li><%= link_to('CONTACT', static_pages_contact_path) %></li>
         <li><%= link_to('ABOUT', static_pages_about_path) %></li>
   		</ul>
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-        <%= form_tag("/products", method: "get") do %>
-            <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-          <% end %>
-        </div>
-      </form>
     </div>
   </div>
 </nav>
