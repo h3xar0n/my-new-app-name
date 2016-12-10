@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-	background-color: #F8F8FF;
+	background: linear-gradient(#F8F8FF, rgba(248, 248, 255, 0.62));
 	border-color: transparent;
 }
 
@@ -51,7 +51,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 53px;
-  background-color: #F8F8FF;
+  background: linear-gradient(rgba(248, 248, 255, 0.62), #F8F8FF);
   float: none;
   text-align: center;
 }

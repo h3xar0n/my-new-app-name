@@ -1,0 +1,56 @@
+<head>
+  <style type="text/css">
+    body { 
+      text-align: center; 
+      background-image: url(<%= asset_path 'behind_glass.jpg' %>);
+      background-size: cover;
+    }
+
+   #login {
+      border: 1px solid grey;
+      background-color: rgba(255, 255, 255, 0.44); 
+      padding: 15px;
+    }
+    /* mobile */
+    #login {
+       width: 90%;
+    }
+    @media only screen and (min-width: 500px) {
+       /* For desktop: */
+      #login {width: 40%;}
+    }
+  </style>
+</head>
+
+<body>
+<div class="container-fluid" id="login">
+  <h2>Log in</h2>
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
+  <div class="field" class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, placeholder: "Email Adress" %>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field" class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions" >
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
+</body>
