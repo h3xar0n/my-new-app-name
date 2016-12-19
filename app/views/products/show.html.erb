@@ -12,32 +12,28 @@
       <p>€<%= @product.price %></p>
       <h5>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h5>
     </div>
-  </div>
+  </div> <!-- row -->
   <div class="row review">
     <div class="col-xs-12 col-md-6 thumbnail">
       <%= render 'new_comment' %>
-    </div>
+    </div> <!-- col new_comment -->
+    <% unless !@product.comments.empty? %>
     <div class="col-xs-12 col-md-6">
-      <% if !@product.comments.empty? %>
-          <%#= image_tag(@product.image_url, class: "img-responsive detail") %>
-          <div class="col-md-4 col-xs-12">
-            <div class="container-rating">
-              <div class="rated" data-score="<%= @product.highest_rating_comment.rating %>"></div>
-                <h5>Best rating:</h5>
-                <p>"<%= @product.highest_rating_comment.body%>"</p>
-            </div>
-          </div><!-- col best -->
-          <div class="col-md-4 col-xs-12">
-            <div class="container-rating">
-              <div class="rated" data-score="<%= @product.lowest_rating_comment.rating %>"></div>
-                <h5>Worst rating:</h5>
-                <p>"<%= @product.lowest_rating_comment.body%>"</p>
-              </div>
-          </div><!-- col  worst-->
-         <% end %>
-    </div> <!-- col -->
+      <div class="col-md-4 col-xs-12 container-rating">
+        <div class="rated" data-score="<%= @product.highest_rating_comment.rating %>"></div>
+          <h5>Best rating:</h5>
+          <p>"<%= @product.highest_rating_comment.body%>"</p>
+        </div> 
+      </div> <!-- col best -->
+      <div class="col-md-4 col-xs-12 container-rating">
+        <div class="rated" data-score="<%= @product.lowest_rating_comment.rating %>"></div>
+          <h5>Worst rating:</h5>
+          <p>"<%= @product.lowest_rating_comment.body%>"</p>
+        </div><!-- col  worst-->
+      </div> <!-- col -->
+    </div> <!-- row review -->
     <div class="col-md-12 col-xs-12">
-      <%= render 'comments' %>
+     <%= render 'comments' %>
     </div><!-- col -->
-  </div>
-</div>
+    <% end %>
+</div> <!-- container show product-->
