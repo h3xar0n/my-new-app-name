@@ -1,3 +1,7 @@
+
+<% if not signed_in? %>
+  <p>You need to be signed in to leave a review.</p>
+<% end %>
 <% if signed_in? %>
   <h4>Add a review:</h4>
   <%= form_for([@product, @product.comments.build]) do |f| %>
