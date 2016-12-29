@@ -1,7 +1,19 @@
-<div class="container-fluid" id="contact" >
-  <div class="header">
-  <h1>Contact us</h1>
-  <h3>If you have a question for us about our products or if you want to make a special order let us know!</h3>
-  </div><!-- end header -->
-  <%= render 'static_pages/contact' %>
-</div>
+<head>
+	<style type="text/css">
+		body { 
+      text-align: center; 
+      background-image: url(<%= asset_path 'mail.jpg' %>);
+      background-size: cover;
+      color: #F8F8FF;
+    }
+	</style>
+</head>
+<body id="contact_page">
+	<div class="container-fluid" id="contact" >
+  	<div class="header">
+  	<h1>Contact us</h1>
+  	<h3>If you have a question for us about our products or if you want to make a special order let us know!</h3>
+  	</div><!-- end header -->
+  	<%= render 'static_pages/contact' %>
+	</div>
+</body>
