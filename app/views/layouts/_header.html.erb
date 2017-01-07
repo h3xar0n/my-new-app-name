@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
   		</button>
   		<div class="ida navbar-brand">
-  			<%= link_to('I D A', static_pages_landing_page_path) %>
+        <%= link_to (static_pages_landing_page_path) do %>
+          <%= image_tag 'logo-kimvandijk.gif', class: 'img-responsive', style: 'height:53px' %>
+        <% end %>
   		</div>
   	</div>
   	<div class="navbar-collapse collapse">

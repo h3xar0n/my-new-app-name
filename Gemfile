@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'will_paginate', '~> 3.1.1'
+gem 'rails-controller-testing'
+gem 'stripe'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -36,6 +38,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
