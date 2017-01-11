@@ -18,6 +18,7 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'will_paginate', '~> 3.1.1'
 gem 'rails-controller-testing'
 gem 'stripe'
+gem "brakeman", :require => false
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

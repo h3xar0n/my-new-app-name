@@ -3,5 +3,9 @@
   <h4><%= product.name %> </h4>
   <p><%= product.colour %></p>
   <p><%= @price_unit %><%= product.price %></p>
-  <p><%= link_to ' Show ', product %><%= link_to ' Edit ', edit_product_path(product) %><%= link_to ' Destroy ', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <p><%= link_to ' Show ', product %>
+  		<% if signed_in? && current_user.admin? %>
+        | <%= link_to ' Edit ', edit_product_path(product) %> | <%= link_to ' Destroy ', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %> </p>
 </div><!-- /col -->
+<% logger.debug "Colour: #{product.colour}"%>
