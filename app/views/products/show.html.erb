@@ -8,10 +8,12 @@
       <%= link_to 'Back', products_path %>
     </div>
     <div class="col-xs-12 col-md-6 text-area thumbnail">
+      <% cache @product do %>
       <p><strong><%= @product.name %></strong></p>
       <p><%= @product.description %></p>
       <p>Available colour: <%= @product.colour %></p>
       <p>€<%= @product.price %></p>
+      <% end %>
       <%= form_tag "/payments/create" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
         <%= hidden_field_tag(:product_id, @product.id) %>
