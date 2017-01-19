@@ -19,7 +19,7 @@
   			<li><%= link_to('CONTACT', static_pages_contact_path) %></li>
         <li><%= link_to('ABOUT', static_pages_about_path) %></li>
         <li role="search">
-          <%= form_tag("/products", method: "get", class: "row") do %>
+          <%= form_tag(products_path, method: "get", class: "row") do %>
             <%= text_field_tag(:q) %>
             <%= submit_tag "Search", name: nil %>
           <% end %>
