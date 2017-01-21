@@ -20,6 +20,8 @@ gem 'rails-controller-testing'
 gem 'stripe'
 gem 'brakeman', :require => false
 gem 'dalli'
+gem 'redis-rails'
+gem 'newrelic_rpm'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
