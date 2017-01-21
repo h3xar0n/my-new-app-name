@@ -104,4 +104,7 @@ Rails.application.configure do
     :domain => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  config.web_socket_server_url = "wss://interiordesignagain.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://interiordesignagain.herokuapp.com', 'http://interiordesignagain.herokuapp.com']
 end
