@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 	validates :name, presence: true
 
   has_many :orders
-  has_many :comments
+  has_many :comments, :dependent => :destroy
 
 	def highest_rating_comment
 		comments.rating_desc.first
